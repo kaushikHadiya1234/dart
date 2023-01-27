@@ -1,0 +1,10 @@
+/*Write a Dart program to find a cube of any
+number.*/
+
+void main()
+{
+  int a=5;
+  
+  print("Number of cube =>> ${a*a*a}");
+  
+}

@@ -1,0 +1,9 @@
+/*Write a Dart program to find a user given
+number is even or odd.*/
+
+void main()
+{
+  int a=10;
+  
+  a%2==0?print("Even"):print("odd");
+}

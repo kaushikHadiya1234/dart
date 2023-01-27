@@ -1,0 +1,10 @@
+/*Write a Dart program to find a Simple
+
+Interest.*/
+
+void main()
+{
+  num i,p=10000,r=2.5,n=1;
+  
+  print("Simple interest =>> ${p*r*n/100}");
+}

@@ -1,0 +1,27 @@
+/*Write a Dart program to create a calculator using
+switch case.*/
+
+void main()
+{
+  num a=7,b=2,n;
+  
+  switch(3)
+  {
+    case 0:
+      print("additon is =>> ${a+b}");
+      break;
+      
+    case 1:
+      print("Sub is =>> ${a-b}");
+      break;
+      
+     case 2:
+      print("multiplication is =>> ${a*b}");
+      break;
+      
+   case 3:
+      print("division is =>> ${a/b}");
+      break; 
+      
+  }
+}
