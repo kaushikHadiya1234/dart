@@ -3,4 +3,77 @@ void main()
 {
   print("Hello Dart");
 }
- 
+ import 'dart:js_util';
+
+import 'package:flutter/material.dart';
+
+class Entery extends StatefulWidget {
+  const Entery({Key? key}) : super(key: key);
+
+  @override
+  State<Entery> createState() => _EnteryState();
+}
+
+class _EnteryState extends State<Entery> {
+  List l1 = [];
+
+  TextEditingController txtName = TextEditingController();
+
+  String data = "";
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "detaile",
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.black,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          TextField(
+            controller: txtName,
+            decoration: InputDecoration(
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Colors.red,
+                ),
+              ),
+              border: OutlineInputBorder(),
+              label: Text("Name"),
+              suffixIcon: Icon(Icons.send),
+            ),
+          ),
+          SizedBox(height: 50),
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                data = txtName.text;
+              });
+            },
+            child: Text("submit"),
+          ),
+          SizedBox(height: 50),
+          Container(
+            height: 200,
+            width: 400,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(color: Colors.black, width: 1),
+              borderRadius: BorderRadius.circular(30)
+            ),
+            child:  Center(
+              child: Text("$data",style: TextStyle(fontSize: 20
+              ),),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
